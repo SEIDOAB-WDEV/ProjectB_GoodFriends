@@ -1,0 +1,22 @@
+Mapping and renaming N-tier layers
+Numberprefix to get right sort order in VSC
+
+using inheritance between DataAccess.EntryModels ::  Domain.Models
+AppWebApi           -> 0.Pres.WebApi
+Services            -> 1.App.Services
+DbRepos             -> 2a.DataAccess.Repos
+DbContext           -> 2b.DataAccess.DbContext
+DbModels            -> 2c.DataAccess.EntryModels
+Models              -> 3.Domain.Models
+Configuration       -> 4b.CrossCut.Configuration
+Encryptions         -> 4a.CrossCut.Encryptions
+
+using Automapper between DataAccess.EntryModels <==>  Domain.Models
+AppWebApi           -> 0.Pres.WebApi
+Services            -> 1.App.Services
+Models              -> 2.Domain.Models
+DbRepos             -> 3a.DataAccess.Repos
+DbContext           -> 3b.DataAccess.DbContext
+DbModels            -> 3c.DataAccess.EntryModels
+Configuration       -> 4b.CrossCut.Configuration
+Encryptions         -> 4a.CrossCut.Encryptions
