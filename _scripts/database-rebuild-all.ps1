@@ -1,6 +1,7 @@
 # För att göra .ps1-filen körbar, kör följande kommando i PowerShell (Behöver bara köras första gången):
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
+
 #If EFC tools needs update use:
 #dotnet tool update --global dotnet-ef
 
@@ -11,9 +12,6 @@
 # .\database-rebuild-all.ps1 sql-music sqlserver docker dbo ../AppWebApi
 # .\database-rebuild-all.ps1 sql-music sqlserver docker dbo ../AppRazor
 # .\database-rebuild-all.ps1 sql-music sqlserver docker dbo ../AppMvc
-
-# Exit immediately if any command fails
-$ErrorActionPreference = "Stop"
 
 param(
     [Parameter(Mandatory=$true)]
